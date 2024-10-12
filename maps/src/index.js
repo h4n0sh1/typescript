@@ -1,10 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /// <reference types="@types/google.maps" />
 /* import { User } from './User';
 import { Company } from './Company'; */
-var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 1,
-    center: {
-        lat: 0,
-        lng: 0
-    }
-});
+var CustomMap_1 = require("./CustomMap");
+new CustomMap_1.CustomMap('map');
