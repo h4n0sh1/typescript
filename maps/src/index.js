@@ -1,5 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var User_1 = require("./User");
-var user = new User_1.User();
-console.log(user);
+/// <reference types="@types/google.maps" />
+/* import { User } from './User';
+import { Company } from './Company'; */
+var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 1,
+    center: {
+        lat: 0,
+        lng: 0
+    }
+});
