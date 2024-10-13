@@ -11,6 +11,9 @@ var Company = /** @class */ (function () {
             lng: faker_1.faker.location.longitude()
         };
     }
+    Company.prototype.markerContent = function () {
+        return "\n        <div>\n            <h1>Company Name:  ".concat(this.name, "</h1>\n            <h3>Catchphrase:").concat(this.catchPhrase, "</h3>\n        </div>\n        ");
+    };
     return Company;
 }());
 exports.Company = Company;

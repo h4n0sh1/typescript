@@ -10,6 +10,9 @@ var User = /** @class */ (function () {
             lng: faker_1.faker.location.longitude()
         };
     }
+    User.prototype.markerContent = function () {
+        return "User Name:  ".concat(this.name);
+    };
     return User;
 }());
 exports.User = User;
