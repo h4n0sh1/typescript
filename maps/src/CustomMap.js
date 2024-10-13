@@ -74,18 +74,25 @@ var CustomMap = /** @class */ (function () {
     };
     CustomMap.prototype.addMarker = function (mappable) {
         return __awaiter(this, void 0, void 0, function () {
-            var AdvancedMarkerElement;
+            var AdvancedMarkerElement, marker;
+            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, google.maps.importLibrary("marker")];
                     case 1:
                         AdvancedMarkerElement = (_a.sent()).AdvancedMarkerElement;
-                        new AdvancedMarkerElement({
+                        marker = new AdvancedMarkerElement({
                             map: this.googleMap,
                             position: {
                                 lat: mappable.location.lat,
                                 lng: mappable.location.lng
                             }
+                        });
+                        marker.addListener('click', function () {
+                            var infoWindow = new google.maps.InfoWindow({
+                                content: 'Hi there !'
+                            });
+                            infoWindow.open(_this.googleMap, marker);
                         });
                         return [2 /*return*/];
                 }

@@ -1,6 +1,3 @@
-import { User } from './User'
-import { Company } from './Company'
-
 interface Mappable{
     location: {
         lat: number;
@@ -39,12 +36,20 @@ export class CustomMap {
     async addMarker(mappable: Mappable): Promise<void>{
         const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
-        new AdvancedMarkerElement({
+        const marker = new AdvancedMarkerElement({
             map:this.googleMap,
             position: {
                 lat: mappable.location.lat,
                 lng: mappable.location.lng
             }
+        })
+
+        marker.addListener('click', () => {
+            const infoWindow = new google.maps.InfoWindow({
+                content: 'Hi there !'
+            });
+            
+            infoWindow.open(this.googleMap, marker)
         })
     }
 
