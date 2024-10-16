@@ -6,6 +6,8 @@ class Sorter{
 
         for(let i=0; i<length; i++){
             for(let j=0; j<length-i-1;j++){
+
+
                 if(this.collection[j] > this.collection[j+1]){
                     const leftHand = this.collection[j];
                     this.collection[j] = this.collection[j+1]
@@ -16,6 +18,6 @@ class Sorter{
     }
 }
 
-const sorter = new Sorter([10, 3, -5, 0]);
+const sorter = new Sorter([10, 3, -5, 0, 10]);
 sorter.sort();
 console.log(sorter.collection)
