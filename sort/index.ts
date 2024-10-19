@@ -1,7 +1,11 @@
 import { Sorter } from './Sorter';
 import { NumberCollection } from './NumberCollection';
+import { CharacterCollection } from './StringCollection';
 
 const numberCollection = new NumberCollection([10, 3, -5, 0, 30, 5])
-const sorter = new Sorter(numberCollection);
+const stringCollection = new CharacterCollection("ZaXnj0nRsTbBC")
+const sorter = new Sorter(stringCollection);
 sorter.sort();
-console.log(sorter.collection)
+console.log(sorter.collection);
+
+

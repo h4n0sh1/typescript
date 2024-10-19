@@ -6,11 +6,11 @@ export class NumberCollection{
     }
 
     compare(leftIndex: number, rightIndex: number): boolean{
-        return this.data[leftIndex] > this.data[rightIndex]
+        return this.data[leftIndex] > this.data[rightIndex];
     }
     swap(leftIndex: number, rightIndex: number): void{
-        let leftHand = this.data[leftIndex]
-        this.data[leftIndex] = this.data[rightIndex]
-        this.data[rightIndex] = leftHand
+        let leftHand = this.data[leftIndex];
+        this.data[leftIndex] = this.data[rightIndex];
+        this.data[rightIndex] = leftHand;
     }
 }
