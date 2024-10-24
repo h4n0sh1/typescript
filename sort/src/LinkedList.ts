@@ -4,4 +4,5 @@ export class Node {
     constructor(public data:number){}
 
     //TO-DO : Implement Linked list ops
+    //        Implement sorting logic
 }
