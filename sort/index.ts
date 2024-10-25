@@ -10,10 +10,9 @@ linkedList.add(500);
 linkedList.add(-10);
 linkedList.add(-3);
 linkedList.add(5);
-linkedList.print();
 const sorter = new Sorter(linkedList);
 sorter.sort();
-//console.log(sorter.collection);
+console.log(sorter.collection);
 linkedList.print()
 
 

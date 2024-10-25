@@ -42,7 +42,7 @@ class LinkedList {
         }
         let counter = 0;
         let node = this.head;
-        while (node.next) {
+        while (node) {
             if (counter === index) {
                 return node;
             }
@@ -55,7 +55,6 @@ class LinkedList {
         if (!this.head) {
             throw new Error('List is empty');
         }
-        console.log(this.at(leftIndex).data, this.at(rightIndex).data);
         return this.at(leftIndex).data > this.at(rightIndex).data;
     }
     // Only swapping values
