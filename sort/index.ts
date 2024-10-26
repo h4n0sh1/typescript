@@ -1,4 +1,4 @@
-import { Sorter } from './Sorter';
+import { Sorter } from './src/Sorter';
 import { NumberCollection } from './src/NumberCollection';
 import { CharacterCollection } from './src/CharacterCollection';
 import { LinkedList } from './src/LinkedList';
@@ -10,9 +10,8 @@ linkedList.add(500);
 linkedList.add(-10);
 linkedList.add(-3);
 linkedList.add(5);
-const sorter = new Sorter(linkedList);
-sorter.sort();
-console.log(sorter.collection);
+
+linkedList.sort()
 linkedList.print()
 
 
