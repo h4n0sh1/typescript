@@ -10,6 +10,7 @@ export class LinkedList extends Sorter{
     head: Node | null = null;
 
     add(data: number): void{
+        
         const node = new Node(data);
         
         if(!this.head){
