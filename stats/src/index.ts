@@ -1,5 +1,3 @@
-import fs from 'fs';
-import { CsvFileReader } from './CsvFileReader';
 import { MatchReader }  from  './MatchReader';
 import { MatchResult } from  './MatchResult';
 
