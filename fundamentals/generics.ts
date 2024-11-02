@@ -51,3 +51,28 @@ printAnything<string>(["a", "b", "c", "d"]);
 
 // Generic Function With Type Inference
 printAnything(["a", "b", "c", "d"]);
+
+class House {
+  print(): void {
+    "This is a house";
+  }
+}
+
+class Car {
+  print(): void {
+    "This is a car";
+  }
+}
+
+interface Printable {
+  print(): void;
+}
+
+// Generic Constraints
+function printHousesOrCars<T extends Printable>(arr: T[]): void {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].print();
+  }
+}
+
+printHousesOrCars([new Car(), new House(), new Car()]);
