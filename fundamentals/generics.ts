@@ -21,3 +21,9 @@ class ArrayOfAnything<T> {
     return this.collection[index];
   }
 }
+
+// Without Type Inference
+new ArrayOfAnything<string>(["a", "b", "c"]);
+
+// With Type Inference
+const arr = new ArrayOfAnything([1, "a", "@", 0x78]);
